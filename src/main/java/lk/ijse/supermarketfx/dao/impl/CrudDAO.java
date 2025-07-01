@@ -3,14 +3,16 @@ package lk.ijse.supermarketfx.dao.impl;
 import lk.ijse.supermarketfx.entity.Customer;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public interface CurdDAO {
-    ArrayList<Customer> getAll();
-    boolean save(Customer customer);
-    boolean update(Customer customer);
+public interface CrudDAO <T>{
+    List<T> getAll();
+    String getNextId();
+    boolean save(T t);
+    boolean update(T t);
     boolean delete(String id);
 
     ArrayList<String> getAllIDs();
 
-    Customer findbyID(String id);
+    T findById(String id);
 }
