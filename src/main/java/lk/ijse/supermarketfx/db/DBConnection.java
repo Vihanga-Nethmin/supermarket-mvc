@@ -23,7 +23,7 @@ public class DBConnection {
         connection = DriverManager.getConnection(
                 "jdbc:mysql://localhost:3306/supermarketfx",
                 "root",
-                "1234"
+                "Teenu123"
         );
     }
 
